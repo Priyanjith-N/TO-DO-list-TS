@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TO-DO List</title>
+  <link rel="shortcut icon" href="./src/typescript.svg" type="image/x-icon">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+  <main>
+    <section class="w-screen h-screen flex flex-column justify-center items-center">
+      <div class="w-[80%]">
+        <div class="w-[100%] flex gap-8 items-baseline justify-center my-5">
+          <h1 class="font-semibold text-2xl">TO-DO</h1>
+          <img class="h-10 w-10 rounded" src="./src/typescript.svg" alt="">
+        </div>
+        <form action="" method="post" id="itemEntryForm">
+          <div class="w-[100%] mb-5">
+            <input class="outline-none py-2 px-4 text-base w-[100%]" type="text" name="item" id="Items" placeholder="Enter your task name">
+            <button type="submit" class="py-2 px-4 w-[100%] bg-blue-950 block mt-2">Add</button>
+          </div>
+        </form>
+        <div class="bg-amber- h-[40vh] overflow-y-auto" id="listItems">
+        </div>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="./src/main.ts"></script>
+</body>
+</html>
