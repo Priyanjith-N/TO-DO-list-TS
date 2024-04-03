@@ -5,6 +5,7 @@ interface List {
     load(): void;
     save(): void,
     clearList(): void;
+    isExist(item: string): boolean
     addItem(itemObj: ListItem):void;
     removeItem(id: string): void;
 }
@@ -39,6 +40,10 @@ export default class FullList implements List {
     clearList(): void {
      this._list = [];
      this.save();   
+    }
+
+    isExist(item: string): boolean {
+        return this._list.some(each => each.item.toLowerCase() === item);
     }
 
     addItem(itemObj: ListItem): void {
